@@ -1,0 +1,53 @@
+.main {
+  height: 650px;
+  width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@media screen and(max-width: $tablet-small) {
+		margin-bottom: 30px;
+	}
+}
+.main-block {
+  width: 750px;
+  min-height: 300px;
+  border: 6px solid $accent-color;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+  padding: 40px;
+  margin-top: 180px;
+	text-align: center;
+	@media screen and(max-width: $tablet-small) {
+		margin-top: 90px;
+	}
+
+	&__link {
+		color: $white;
+		font-size: 22px;
+		font-family: $bold-font;
+		&::after {
+			content: '';
+			display: block;
+			width: 10%;
+			height: 1px;
+			background-color: $white;
+			margin: 0 auto;
+			margin-top: 2px;
+		}
+	}
+
+	&__title {
+		color: $white;
+		text-transform: uppercase;
+		font-size: 52px;
+		margin-top: 35px;
+	}
+
+	&__descr {
+		color: $accent-color;
+		text-transform: uppercase;
+		font-size: 22px;
+		margin-top: 35px;
+		font-family: $bold-font;
+	}
+}

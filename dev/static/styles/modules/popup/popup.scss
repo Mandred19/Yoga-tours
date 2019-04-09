@@ -1,0 +1,157 @@
+.popup {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+	width: 700px;
+	@media screen and(max-width: $tablet) {
+		width: 90%;
+		margin: 0 auto;
+	}
+	// @media screen and(max-width: $phone-wide) {
+	// 	margin: 0 auto;
+	// }
+	&-body {
+		position: relative;
+		&--thank {
+			width: 600px !important;
+			@media screen and(max-width: $tablet) {
+				width: 500px !important;
+				margin: 0 auto;
+			}
+			@media screen and(max-width: $phablet) {
+				width: 400px !important;
+			}
+			@media screen and(max-width: $phone-wide) {
+				width: 90% !important;
+			}
+		}
+	}
+
+	&-title {
+		display: block;
+		width: 100%;
+		height: 71px;
+		line-height: 71px;
+		margin: 0;
+		background-color: $accent-color;
+		color: $white;
+		text-transform: uppercase;
+		font-size: 21px;
+		font-weight: 500;
+		text-align: center;
+		&--success {
+			@media screen and(max-width: $phone) {
+				height: 90px;
+				line-height: 40px;
+			}
+		}
+	}
+
+	&-form {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		padding: 35px 40px 50px 40px;
+		color: $white;
+		@media screen and(max-width: $phablet) {
+			padding: 35px 20px 50px 20px;
+		}
+	}
+
+	&-close {
+		position: absolute;
+		right: 1rem;
+		top: 1rem;
+		@media screen and(max-width: $phone-wide) {
+			display: none;
+		}
+		&__icon {
+			@include size(20px);
+			cursor: pointer;
+			fill: $white;
+			transition: all linear .3s;
+			@media screen and(min-width: 1023.98px) {
+				&:hover {
+					fill: $error;
+				}
+			}
+		}
+	}
+}
+
+.main-form {
+
+	&__header {
+		padding: 0;
+		font-weight: 400;
+		line-height: 27px;
+		font-size: 30px;
+		text-align: center;
+	}
+
+	&__label {
+		display: block;
+		margin-top: 23px;
+		font-size: 20px;
+		font-weight: 300;
+		text-align: center;
+		margin-bottom: 15px;
+		@media screen and(max-width: $tablet) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__input {
+		width: 365px;
+		height: 50px;
+		font-size: 18px;
+		background-color: $accent-color;
+		border: none;
+		color: $white;
+		text-align: center;
+		transition: all linear .3s;
+		&::placeholder {
+			color: $white;
+			opacity: .5;
+		}
+		@media screen and(max-width: $phablet) {
+			width: 90%;
+		}
+	}
+
+	&__wrap {
+		align-items: flex-end;
+		display: flex;
+		justify-content: space-between;
+		@media screen and(max-width: $tablet) {
+			align-items: center;
+			flex-direction: column;
+			& > * {
+				margin: 15px 0;
+				&:first-child { margin-top: 0; }
+				&:last-child { margin-bottom: 0; }
+			}
+		}
+	}
+}
+
+.show-on-success {
+	display: none;
+	max-width: 600px;
+}
+
+.mfp-hide {
+	display: none;
+}
+.mfp-bg {
+	opacity: 0.5;
+}
+
+.error {
+	&::placeholder {
+		color: $error;
+	}
+}

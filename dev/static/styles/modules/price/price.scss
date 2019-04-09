@@ -1,0 +1,98 @@
+.counter {
+	margin-bottom: 150px;
+	@media screen and(max-width: $tablet-small) {
+		margin-bottom: 100px;
+	}
+}
+
+.counter-title {
+  font-size: 32px;
+	color: $accent-color;
+	&::after {
+		content: '';
+		display: block;
+		width: 50%;
+		height: 1px;
+		background-color: $accent-color;
+		margin-top: 4px;
+		@media screen and(max-width: $tablet-wide) {
+			margin: 4px auto 0 auto;
+		}
+		@media screen and(max-width: $tablet-small) {
+			display: none;
+		}
+	}
+	@media screen and(max-width: $tablet-wide) {
+		margin: 0 auto;
+	}
+}
+
+.counter-block {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+	align-items: center;
+	& > * {
+		&:not(:last-child) { margin-right: 50px; }
+	}
+
+	&__option {
+		font-size: 22px;
+		color: $accent-color;
+		width: 200px;
+		@media screen and(max-width: $phablet) {
+			width: 150px;
+		}
+		@media screen and(max-width: $phone) {
+			width: 100px;
+		}
+	}
+
+	&__input {
+		display: block;
+		width: 120px;
+		height: 60px;
+		padding: 10px;
+		color: $accent-color;
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid rgba(199, 126, 48, 0.6);
+		font-size: 46px;
+		text-align: center;
+	}
+
+	&__select {
+		width: 230px;
+		height: 35px;
+		background-color: rgba(199, 126, 48, 0.8);
+		color: $white;
+		border: none;
+		@media screen and(max-width: $phablet) {
+			width: 150px;
+		}
+	}
+}
+
+.counter-block-total {
+	font-size: 22px;
+	color: $accent-color;
+	margin-top: 40px;
+	& span {
+		text-align: start;
+		font-size: 46px;
+		color: $accent-color;
+		margin-left: 89px;
+		@media screen and(max-width: $phablet) {
+			margin-left: 50px;
+		}
+	}
+}
+
+.counter input[type=number]::-webkit-inner-spin-button,
+.counter input[type=number]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.counter input[type=number] {
+  appearance: textfield;
+}

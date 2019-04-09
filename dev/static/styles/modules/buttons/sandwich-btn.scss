@@ -1,0 +1,47 @@
+@media screen and(max-width: $phone-wide) {
+	.sandwich-btn{
+		height: 5px;
+		width: 30px;
+		position: absolute;
+		display: block;
+		top: 50%;
+		right: 1rem;
+		border-radius: 5px;
+		background-color: $white;
+		transform: translate(-50%,-50%) rotate(0deg);
+		transition: all linear .4s;
+		&::before, &::after{
+			content:"";
+			position: absolute;
+			height: inherit;
+			border-radius: inherit;
+			background-color: inherit;
+			margin: auto;
+			width: 50%;
+			transition: all linear .4s;
+		}
+		&::before{
+			top: -12px;
+			left: 0;
+			transform-origin: left;
+		}
+		&::after{
+			bottom:-12px;
+			right: 0;
+			transform-origin: right;
+		}
+	}
+
+	.open{
+		background-color: $accent-color;
+		transform:translate(-50%,-50%) rotate(135deg);
+		&::before{
+			top:0;
+			transform: translateX(100%) rotate(-90deg);
+		}
+		&::after{
+			bottom:0;
+			transform: translateX(-100%) rotate(-90deg);
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.popup.mfp-hide#popup
+	.hide-on-success
+		.popup-body
+			.popup-close
+				+icon('close', 'popup-close__icon')
+			.popup-title Форма обратной связи
+			.popup-form(style="background-image:url('static/images/content/modal.jpg')")
+				form.main-form#main-form(action='#')
+					.main-form__header Узнайте больше о своём отдыхе
+					label.main-form__label(for='phone') Введите ваш номер телефона
+					.main-form__wrap
+						input.main-form__input(name='phone' type='phone' required placeholder='+79789733345')
+						button.btn.popup-form__btn(type='submit') Оставить заявку!
+
+	.show-on-success
+		.popup-body.popup-body--thank
+			.popup-close
+				+icon('close', 'popup-close__icon')
+			.popup-title.popup-title--success Спасибо за вашу заявку
+			.popup-form(style="background-image:url('static/images/content/modal.jpg')")
+				.description__text.description__text--success Ваша заявка успешно отправлена. Ожидайте звонка оператора и задайте ему все интересующие вас вопросы. Всегда рады вам помочь.

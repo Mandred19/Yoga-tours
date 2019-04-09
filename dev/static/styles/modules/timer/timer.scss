@@ -1,0 +1,46 @@
+.timer {
+	text-align: center;
+	margin-bottom: 150px;
+	@media screen and(max-width: $tablet-small) {
+		margin-bottom: 100px;
+	}
+
+	&__title {
+		font-size: 36px;
+		color: $accent-color;
+	}
+
+	&__action {
+		font-size: 30px;
+		color: $white;
+		margin-top: 40px;
+	}
+
+	&__numbers {
+		margin-top: 40px;
+		font-size: 90px;
+		color: $accent-color;
+		@media screen and(max-width: $phone-wide) {
+			align-items: center;
+			font-size: 60px;
+			display: flex;
+			flex-direction: column;
+		}
+		&::after {
+			content: '';
+			display: block;
+			width: 30%;
+			height: 1px;
+			background-color: $accent-color;
+			margin: 4px auto 0 auto;
+			@media screen and(max-width: $phablet) {
+				display: none;
+			}
+		}
+	}
+}
+
+.days, .hours, .minutes, .seconds {
+	display: inline-block;
+	width: 105px;
+}

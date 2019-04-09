@@ -1,0 +1,16 @@
+extends template/main
+
+block variables
+	- var title = 'Йога-туры в Индию'
+	- var pageClass = 'index-page'
+
+block content
+	//- include pages/index/name_file
+	include pages/index/main
+	include pages/index/about
+	include pages/index/timer
+	include pages/index/gallery
+	include pages/index/price
+	include pages/index/contacts
+	include pages/index/footer
+	//- block script

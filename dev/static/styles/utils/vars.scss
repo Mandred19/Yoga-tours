@@ -1,0 +1,52 @@
+// Colors
+$white					:#ffffff;
+$dark						:#000000;
+$base-text			:#151515;
+$button					:#94774a;
+$link						:#ffffff;
+$accent-color		:#c78030;
+$bg-gray				:#f6f6f6;
+$error					:#b00020;
+
+// Sizes
+$base-font-size		: 16px;
+
+// Weight
+$base-font-weight	: 400;
+
+$breakpoints: (
+  "phone"       	: 400px,
+  "phone-wide"  	: 480px,
+  "phablet"     	: 560px,
+  "tablet-small"	: 640px,
+  "tablet"      	: 768px,
+  "tablet-wide" 	: 1024px,
+  "desktop"     	: 1248px,
+  "desktop-wide"	: 1440px
+);
+
+// Breakpoints
+$phone-small			: 320px; // x 560px
+$phone-middle			: 360px; // x 640px
+$phone						: 400px;
+$phone-wide				: 480px;
+$phablet					: 560px;
+$tablet-small			: 640px;
+$tablet						: 768px; // x 1024px
+$tablet-large			: 860px;
+$desktop-small		: 992px;
+$tablet-wide			: 1024px; // 768px
+$desktop					: 1248px;
+$desktop-wide			: 1440px;
+$desktop-large		: 1600px;
+
+// Content-size
+$content-size			: 1170px;
+
+// Fonts
+$main-font	: 'Roboto-Regular', Arial, sans-serif;
+$bold-font	: 'Roboto-Bold', 'Arial Bold', sans-serif;
+
+// @media screen and(max-width: $desktop) {
+// 	padding: 0 10px;
+// }

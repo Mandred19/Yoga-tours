@@ -1,0 +1,17 @@
+.counter#price
+	.container.container--price
+		.counter-title Рассчитайте стоимость вашего отдыха
+		.counter-block
+			.counter-block__option Количество людей
+			input.counter-block__input(type='number' min='1' step='1')
+		.counter-block
+			.counter-block__option На сколько дней
+			input.counter-block__input(type='number' min='1' step='1')
+		.counter-block.counter-block--big
+			.counter-block__option Выберете базу
+			select.counter-block__select#select(name='place')
+				option#mumbai(value='1') Индия, Мумбай
+				option#kerala(value='1.5') Индия, Керала
+				option#varanasi(value='1.8') Индия, Варанаси
+		.counter-block-total Итоговая сумма
+			span#total 0

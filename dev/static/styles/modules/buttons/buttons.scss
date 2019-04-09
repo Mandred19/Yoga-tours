@@ -1,0 +1,49 @@
+@import "sandwich-btn";
+
+.btn {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	transition: all linear .3s;
+	border: 1px solid $accent-color;
+  color: $accent-color;
+  text-transform: uppercase;
+	font-family: $bold-font;
+	height: 50px;
+	@media screen and(min-width: 1023.98px) {
+		&:hover {
+			box-shadow: 0px 0px 10px $accent-color;
+		}
+	}
+}
+
+.description__btn {
+  width: 200px;
+	margin-top: 30px;
+	background-color: transparent;
+}
+
+.cont-form__btn {
+  margin-top: 60px;
+  width: 200px;
+  background-color: transparent;
+}
+
+.popup-form__btn {
+  width: 200px;
+  margin-left: 16px;
+	background-color: transparent;
+	@media screen and(max-width: $tablet-small) {
+		margin-left: 0;
+	}
+}
+
+.timer__btn {
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 250px;
+  height: 60px;
+  background-color: transparent;
+}
